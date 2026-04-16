@@ -1,0 +1,117 @@
+---
+title: Orion Global Op
+lastUpdated: 2026-04-16
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Orion Global Op 是 Ingress 官方于 2026 年 Orion 赛季中发布的全球同步活动。官方背景设定是 Orion 星座的天文对齐导致 XM 网络拓扑不稳定，需要全球特工通过大量建线、盖场与拆场来"重新校准"网络。
+
+**活动时间**：2026年4月24日 18:00 UTC — 2026年5月11日 18:00 UTC（共17天）
+
+积分通过 Scanner 的 [Dispatch](/INGRESS-GUIDE/gameplay/dispatch/) 界面追踪。
+
+---
+
+### 计分规则
+
+<div style="display: flex; justify-content: center; width: 100%;">
+
+| 操作 | 积分 |
+|:---|:---:|
+| 摧毁任意 Link（含 Machina 或己方） | 1 |
+| 摧毁任意 Field（含 Machina 或己方） | 3 |
+| 建立 Unique Link | 2 |
+| 建立 Unique Field（1 人拥有全部 Link） | 4 |
+| 建立 Unique Field（2 人分别拥有 Link） | **每人 12** |
+| 建立 Unique Field（3 人分别拥有 Link） | **每人 30** |
+
+</div>
+
+#### Unique Link
+
+活动窗口内，你与某个 Portal 之间**首次**建立的连线。同一对 Portal 之间，你只能获得一次 Unique Link 的 2 分，哪怕中途被摧毁又重建。
+
+#### Unique Field
+
+每个三角形（由三个 Portal 组成）对你而言有一个最高 30 分的上限。只要你尚未从这个三角形累积到 30 分，它对你来说就还是 Unique Field，每次建立都能继续积分。
+
+<Aside type="tip">
+如果你先单人建了一个 Field（得 4 分），后来和其他两名特工一起重建同一个三角形（3 人各持 1 条 Link），你可以追加得分直到达到 30 分上限。不需要提前规划"完美的第一次"，后期仍可补回差额。
+</Aside>
+
+---
+
+### 个人奖励
+
+活动分为两个阶段，均在 Dispatch 的 Campaign 界面完成。
+
+<div style="display: flex; justify-content: center; width: 100%;">
+
+| 任务 | 完成条件（累计积分） | 奖励 |
+|:---|:---:|:---|
+| Assignment 1 | 1,000 | 铜牌 + 2,000 Orion Tokens |
+| Assignment 2 | 2,500 | 银牌 + 2,000 Orion Tokens |
+| Assignment 3 | 6,000 | 金牌 + 3,500 Orion Tokens |
+| Stage 2（重启） | 完成 Stage 1 后手动 Restart | 高级道具（无 Token） |
+
+</div>
+
+Stage 2 需在完成全部 Stage 1 任务后，在 Dispatch 界面主动点击 **Restart** 激活，不会额外给 Orion Token，仅奖励道具。
+
+---
+
+### 阵营得分
+
+活动结束后，1,000 个 Season Points 将按两个阵营各自总积分的比例分配，精确到一位小数。结果在活动结束后一周内于 [ingress.com/news](https://ingress.com/news) 公布。
+
+---
+
+### 刷分策略 
+
+活动的核心设计非常明确地鼓励两件事：**多重建线**和**多人合作**。下面按照不同情况给出建议。
+
+### 策略一：毒掉顶点
+
+**摧毁己方的 Link 和 Field 同样得分**，Machina 也算。
+
+建议建完整轮多重后毒掉顶点再去下一片区域。
+
+---
+
+### 策略二：单人多重
+
+没有队友时，到 Portal 密集的地方执行[单端点多重（Fanfield）](/INGRESS-GUIDE/gameplay/multifield/#2-单端点多重-single-anchor-pyramids--扇形--fanfield)是单人效率最高的选择。
+
+**得分估算**（以 1 个顶点 + 50 个外围 Portal形成完整三角多重的 Fanfield 为例）：
+- 建立：151 个 Field × 4分 + 153 条 Link × 2分 = **910 分**
+- 毒掉顶点：97 × 3分 + 50 × 1分 = **341 分**
+- 单次合计：约 **1251 分**
+
+达到 Gold（6,000 分）需要约 5 次类似规模的操作。
+
+---
+
+### 策略三：2 人协作
+
+两人配合，一人A负责所有到顶点的线，一人B负责完成多重封口。这会导致有约1/3的Field吃不到多人额外分数。同样以50入射估算：
+
+**得分估算**：
+
+对于A而言：
+- 建立：101 个 合作Field × 12分 + 50 条 Link × 2分 = **1312 分**
+- 毒掉顶点：97 × 3分 + 50 × 1分 = **341 分**
+- 单次合计： **1653 分**
+
+对于B而言：
+- 建立：101 个 合作Field × 12分 + 建立50个非合作 Field × 4分 + 103 条 Link × 2分 = **1618 分**
+
+无破坏分数
+
+两人分数总和远高于单人多重，但是个人效率仅提高约30%。
+
+---
+
+### 策略四：3 人协作（最优）
+
+三人各持 1 条 Link 组成三角形，触发 **每人 30 分**，是所有方式中的最高效率。由于三人多重Link分配较为复杂，不作计算。
