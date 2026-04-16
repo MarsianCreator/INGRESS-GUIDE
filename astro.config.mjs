@@ -14,6 +14,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: '游戏操作', autogenerate: { directory: 'guides' } },
 				{ label: '游戏玩法', autogenerate: { directory: 'gameplay' } },
+				{ label: '游戏活动', autogenerate: { directory: 'events' } },
 				{ label: '名词解释', autogenerate: { directory: 'reference' } },
 				{ label: '游戏数据', autogenerate: { directory: 'data' } },
 			],
