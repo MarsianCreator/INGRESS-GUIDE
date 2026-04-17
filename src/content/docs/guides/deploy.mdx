@@ -2,7 +2,7 @@
 title: Deploy/部署
 sidebar:
   order: 3
-lastUpdated: 2026-04-03
+lastUpdated: 2026-04-17
 ---
 import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
@@ -44,7 +44,10 @@ import north from '../../../assets/north.png';
 
 Portal等级受Portal上被部署的Resonator的平均等级影响，详见 [Portal等级](/INGRESS-GUIDE/reference/portal/#portal%E7%9A%84%E7%AD%89%E7%BA%A7)。
 
-如果Portal上已无空余插槽，你可以通过点击一个插槽对该插槽上的Resonator进行**升级**，前提是你将部署的Resonator等级高于目前Resonator等级，且你在该Portal上部署的Resonator未超过个数限制。
+如果Portal上已无空余插槽，你可以通过点击一个插槽对该插槽上的Resonator进行 **升级** ，有两个前提：
+
+  1. 将部署的Resonator等级高于目前Resonator等级。
+  2. 你在该Portal上部署的Resonator未超过个数限制。
 
 ### Mod的部署
 
@@ -52,8 +55,6 @@ Portal等级受Portal上被部署的Resonator的平均等级影响，详见 [Por
 
 一个玩家一次最多可以在一个Portal上部署两个Mod，有时你可能会发现一个Portal上存在相同玩家部署的两个以上的Mod，这通常是因为他们使用了翻转阵营的道具，例如[毒](/INGRESS-GUIDE/reference/flipcard/)或者[VRBB](/INGRESS-GUIDE/reference/battlebeacon/)。
 
-<Aside type="tip">
-Mod一旦部署上就无法被轻易拆除，在部署Mod前请三思。
+>Mod一旦部署上就无法被轻易拆除，在部署Mod前请三思。
 
-</Aside>
 各Mod的功能请参见[Mod](/INGRESS-GUIDE/reference/mods/)。

@@ -1,7 +1,7 @@
 ---
 title: Cooldown/冷却
 description: Hack冷却如何受Mod与操作影响
-lastUpdated: 2026-04-03
+lastUpdated: 2026-04-17
 ---
 
 在Hack Portal时，玩家无法短时间大量从同一个Portal上获取物资；在一次Hack后，Portal会进入**冷却状态**，该状态下Portal无法被Hack，通常数分钟后该状态会解除，这段时间称为**冷却时间**。
@@ -9,7 +9,10 @@ lastUpdated: 2026-04-03
 冷却时间的影响因素：
 
 - Portal占领者：若Portal属于友方，冷却时间默认180秒；若Portal属于敌方或中立，冷却时间默认300秒。
-- 部署的Mod：[Heatsink](/INGRESS-GUIDE/reference/farmmod/#heatsink/)会显著影响冷却时间，并且可以允许玩家在部署后立刻重置整个熔毁期间的所有Hack记数。
+- 部署的Mod：
+    - [Heatsink](/INGRESS-GUIDE/reference/farmmod/#heatsink/)会显著影响冷却时间，并且可以允许玩家在部署后立刻重置整个熔毁期间的所有Hack记数。
+    - [Multihack](/INGRESS-GUIDE/reference/farmmod/#multihack)会影响一次熔毁周期内可以Hack的次数。
+    - 以上Mod在同一个Portal上可以部署多个，多个同类Mod对Portal冷却时间的影响参见[Mod增益衰减效应](/INGRESS-GUIDE/data/diminishingrule/#hack间隔)。
 
 在此基础上，如果对一个没有额外Mod的Portal连续Hack了4次，Portal会进入**熔毁状态**，即从第一次Hack开始计时，相同Portal向后4个小时内仅能Hack 4次直到触及增加后的熔毁上限。
 
