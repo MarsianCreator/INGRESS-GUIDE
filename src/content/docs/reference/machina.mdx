@@ -1,6 +1,6 @@
 ---
 title: Machina/机械军
-lastUpdated: 2026-04-13
+lastUpdated: 2026-04-25
 ---
 
 import { Image } from 'astro:assets';
@@ -18,7 +18,7 @@ Machina 会在长期中立的Portal 上自然生成，并会像病毒一样沿�
 
 ### 生成与扩散机制
 
-> **注意**：由于官方未公开具体的底层数值，以下部分机制来源于 Ingress 社群（如 [Machina Research Group](https://foo-games.com/ingress/machina-research-group/)）的观测统计，可能随版本暗改而变化。
+> **注意**：由于官方未公开具体的底层数值，以下部分机制来源于 Ingress 社群（如 [Machina Research Group](https://t.me/MachinaResearchGroup/25116)）的观测统计，可能随版本暗改而变化。
 
 - **生成**：Machina 种子倾向于在没有玩家活动的区域自然生成。根据社群观测，系统通常在每个[计分周期](/INGRESS-GUIDE/guides/controlfield/#mu-%E7%9A%84%E5%BE%97%E5%88%86%E8%A7%84%E5%88%99)开始时，在满足条件的 **S2 Level 12 单元格**（包含至少 40 个 Portal 且至少有 1 个白 Po）内尝试生成新的 Machina 种子。新生成的种子为 L1，带有 8 个 25% 血量的红 Resonator。
 - **集群与扩散**：由同一个种子感染出来的所有红 Po 会形成一个“集群”。每隔约 5 小时，集群中会有一个红 Po 尝试升级。升级时该 Portal 所有的脚会升一级并恢复至 25% 血量，同时它会向周围的白 Po 射出 0 到 5 条红 Link，将其感染为新的 L1 红 Po。红 Po 的出线数量不受 8 条限制（曾观测到最高 41 条出线）。
